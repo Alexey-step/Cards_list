@@ -21,6 +21,7 @@ const SortingItem: React.FC<Props> = ({ option, onItemClick }) => {
     <li
       className="sorting__item"
       onClick={() => { return handleOption(option); }}
+      data-testid="select-item"
     >
       {option}
 
