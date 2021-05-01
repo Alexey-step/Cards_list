@@ -23,7 +23,7 @@ const Info: React.FC = () => {
     const cards = JSON.parse(localStorage.getItem('cards'));
     const savedCard = cards.find((item: Card) => { return String(item.id) === id; });
     if (savedCard) {
-      dispatch(ActionCreator.setCard(savedCard));
+      dispatch(ActionCreator.setActiveCard(savedCard));
     }
   }, [dispatch]);
 
