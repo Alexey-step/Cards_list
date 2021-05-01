@@ -1,0 +1,18 @@
+@import "../../theme/variables.scss";
+
+.heart-icon {
+  width: 40px;
+  height: 40px;
+  fill: transparent;
+  stroke: #3d405b;
+
+  &--active {
+    fill: $basic-tomato;
+  }
+
+  &:focus,
+  &:hover {
+    fill-opacity: 0.8;
+    stroke-opacity: 0.8;
+  }
+}

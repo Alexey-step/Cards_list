@@ -1,0 +1,16 @@
+@import "../../UI/theme/variables.scss";
+@import "../../UI/theme/mixins.scss";
+
+.sorting__item {
+  min-width: 170px;
+  padding: 8px 7px 8px;
+  @include font(14px, 16px);
+  outline: 0;
+  cursor: pointer;
+  border-bottom: 1px solid $basic-blue;
+
+  &:focus,
+  &:hover {
+    background-color: $opacity-blue-light;
+  }
+}

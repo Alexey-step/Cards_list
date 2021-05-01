@@ -1,0 +1,19 @@
+@import "../../theme/variables.scss";
+
+.triangle-arrow {
+  width: 20px;
+  height: 15px;
+  fill: $blue-light;
+  stroke: $basic-blue;
+  transform: rotate(180deg);
+
+  &:focus,
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--desc {
+    fill: $basic-tomato;
+    transform: none;
+  }
+}

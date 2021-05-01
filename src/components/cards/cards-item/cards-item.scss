@@ -1,0 +1,41 @@
+@import "../../UI/theme/mixins.scss";
+
+.card {
+  padding: 10px 20px;
+}
+
+.card__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  align-self: center;
+  @include font(24px, 28px);
+}
+
+.card__description {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  text-align: left;
+  word-break: break-all;
+}
+
+.card__date {
+  margin-bottom: 15px;
+  opacity: 0.3;
+  align-self: flex-end;
+}
+
+.card__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}

@@ -1,0 +1,35 @@
+@import "../../UI/theme/variables.scss";
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards__item {
+  border: 2px solid $basic-blue;
+  background-color: $milk-white;
+  color: $basic-blue;
+  min-height: 200px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &--add {
+    border: 2px dotted $basic-blue;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cards__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

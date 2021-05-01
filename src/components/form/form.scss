@@ -1,0 +1,38 @@
+@import "../UI/theme/variables.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $milk-white;
+  border: 2px solid $basic-blue;
+  padding: 20px 10px;
+  border-radius: 4px;
+}
+
+.form__field {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px 10px;
+  color: $basic-blue;
+}
+
+.form__group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__btn {
+  align-self: center;
+  background-color: $light-yellow;
+  padding: 10px 0;
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+
+  &--save {
+    margin-right: 5px;
+  }
+}
