@@ -1,10 +1,10 @@
-#InterUp Test Assignment (React, TypeScript)
+# InterUp Test Assignment (React, TypeScript)
 
 ---
 
 Test Assignment for InterUp made on React.
 
-🔎 [Watch project live]()
+🔎 [Watch project live](https://cards-list-app.netlify.app)
 
 The project is a simple SPA, like todo list, where you can add new card with title and description, add this card to favorite, edit, and delete them, and  I made many improvements to the app, such as:
 
@@ -16,7 +16,7 @@ spinner.
 
 🛠 Technologies used: HTML/SCSS, JavaScript (ES6), Webpack, Jest, TypeScript, React, Redux, LocalStorage.
 
-###Install
+### Install
 
 ---
 
@@ -25,17 +25,17 @@ To install and use project locally you need Node.js v10+.
 >npm i
 
 
-#####Usage
+##### Usage
 
 >npm run start
 
-#####Run tests
+##### Run tests
 
 >npm test
 
 ---
 
-####Author
+#### Author
 ---
 👦 Alexey Stepanov
 
