@@ -16,12 +16,12 @@ const Main: React.FC = () => {
   const currentCards = cards.slice(offset, offset + CARDS_PER_PAGE);
 
   return (
-    <div className="main">
+    <main className="main">
       <h1 className="main__title">Card list</h1>
       <Sorting />
       <Cards cards={currentCards} />
       <Paginate pageCount={pageCount} onPageClick={setCurrentPage} />
-    </div>
+    </main>
   );
 };
 

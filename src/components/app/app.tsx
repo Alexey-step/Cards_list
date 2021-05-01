@@ -8,6 +8,7 @@ import { RootState } from '../../store/reducer';
 import * as ActionCreator from '../../store/action-creators';
 import { Card } from '../../types';
 import { AppRoute } from '../../const';
+import NotFound from '../pages/not-found/not-found';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -34,6 +35,9 @@ const App: React.FC = () => {
       </Route>
       <Route path={`${AppRoute.INFO}/:id`}>
         <Info />
+      </Route>
+      <Route>
+        <NotFound />
       </Route>
     </Switch>
   );
