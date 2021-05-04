@@ -58,4 +58,12 @@ describe('Action creators work correctly', () => {
 
     expect(ActionCreator.setIsAscending()).toEqual(expectedAction);
   });
+  it('setIsBlocking action creator returns correct action', () => {
+    const expectedAction = {
+      type: ActionType.SET_IS_BLOCKING,
+      payload: true,
+    };
+
+    expect(ActionCreator.setIsBlocking(true)).toEqual(expectedAction);
+  });
 });

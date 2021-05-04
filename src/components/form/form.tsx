@@ -2,10 +2,11 @@ import React, { SyntheticEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { useHistory } from 'react-router-dom';
-import { updateCards, deleteCard, setCard } from '../../store/action-creators';
+import * as ActionCreator from '../../store/action-creators';
 import { Card } from '../../types';
 
 import './form.scss';
+import { AppRoute } from '../../const';
 
 interface Props {
   card?: Card,
@@ -25,11 +26,13 @@ const Form: React.FC<Props> = ({ card }) => {
       ...data,
       [name]: value,
     });
+    dispatch(ActionCreator.setIsBlocking(evt.target.value.length > 0));
   };
 
   const handleSubmit = (evt: SyntheticEvent) => {
     evt.preventDefault();
-    dispatch(setCard({
+    dispatch(ActionCreator.setIsBlocking(false));
+    dispatch(ActionCreator.setCard({
       title: data.title,
       description: data.description,
       id: nanoid(),
@@ -44,17 +47,17 @@ const Form: React.FC<Props> = ({ card }) => {
 
   const handleUpdate = (evt: SyntheticEvent) => {
     evt.preventDefault();
-    dispatch(updateCards({
+    dispatch(ActionCreator.updateCards({
       ...card,
       title: data.title,
       description: data.description,
     }));
-    history.push('/');
+    history.push(`${AppRoute.MAIN}`);
   };
 
   const handleDeleteBtn = () => {
-    dispatch(deleteCard(card.id));
-    history.push('/');
+    dispatch(ActionCreator.deleteCard(card.id));
+    history.push(`${AppRoute.MAIN}`);
   };
 
   return (

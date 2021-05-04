@@ -7,12 +7,14 @@ interface InitialStateProps {
   card?: Card,
   option: string,
   isAscending: boolean,
+  isBlocking: boolean
 }
 
 export const InitialState: InitialStateProps = {
   cards: [],
   option: '',
   isAscending: true,
+  isBlocking: false,
 };
 
 export const reducer = createReducer(InitialState, (builder) => {
@@ -60,6 +62,9 @@ export const reducer = createReducer(InitialState, (builder) => {
     })
     .addCase(ActionCreator.setIsAscending, (state) => {
       state.isAscending = !state.isAscending;
+    })
+    .addCase(ActionCreator.setIsBlocking, (state, action) => {
+      state.isBlocking = action.payload;
     });
 });
 

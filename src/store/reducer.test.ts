@@ -76,4 +76,16 @@ describe('Reducer work correctly', () => {
     expect(reducer(state, ActionCreator.setIsAscending()))
       .toEqual(expectedState);
   });
+  it('Reducer should update isBlocking by setIsBlocking action creator given value', () => {
+    const state = {
+      ...InitialState,
+      isBlocking: false,
+    };
+    const expectedState = {
+      ...InitialState,
+      isBlocking: true,
+    };
+    expect(reducer(state, ActionCreator.setIsBlocking(true)))
+      .toEqual(expectedState);
+  });
 });

@@ -37,4 +37,10 @@ export const setOption = createAction(ActionType.SET_OPTION, (option) => {
   };
 });
 
+export const setIsBlocking = createAction(ActionType.SET_IS_BLOCKING, (isBlocking) => {
+  return {
+    payload: isBlocking,
+  };
+});
+
 export const setIsAscending = createAction(ActionType.SET_IS_ASCENDING);

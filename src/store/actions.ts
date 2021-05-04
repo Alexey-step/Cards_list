@@ -6,6 +6,7 @@ enum ActionType {
   SET_OPTION = 'setOption',
   SET_IS_ASCENDING = 'setIsAscending',
   SET_CARD = 'setCard',
+  SET_IS_BLOCKING = 'setIsBlocking',
 }
 
 export default ActionType;
